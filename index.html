@@ -1,9 +1,10 @@
 <!DOCTYPE html>
+<link rel="icon" type="image/x-icon" href="assets/icon-thumb.png" />
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script> 
 <html lang="pt">
 <head>
   <meta charset="UTF-8">
-  <title>Cookies com Background Bloqueado</title>
+  <title>TUTO</title>
   <style>
     body.noscroll {
       overflow: hidden; /* bloqueia scroll */
@@ -110,10 +111,9 @@ This website uses cookies to improve your experience. Do you accept?</p>
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <div class="input-group">
                             <input class="form-control" type="text" placeholder="Enter tutorials" aria-label="Enter here tutorials" aria-describedby="button-search" />
-                            <button class="btn btn-primary" id="button-search" type="button">Search</button>
+                            <button onclick="window.location.href='Search/Filter_search_result_page.html'" class="btn btn-primary" id="button-search" type="button">Search</button>
                         </div>
                     
-                        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
                         <li class="nav-item"><a onclick="window.location.href='About/index.html'" class="nav-link" href="#!">About us</a></li>
                         <!-- <button type="Login" class="btn btn-primary mb-2">Login</button> -->
                         <button onclick="window.location.href='LoginPage/index.html'"class="btn btn-primary" id="button-login" type="button">Login</button>
