@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+        <title>TUTO</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="../assets/icon-thumb.png" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="../css/styles.css" rel="stylesheet" />
+   
+</head>
+<body>
+      <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                
+		<img src="../src/Tuto_logo_t-A09485.png" width="50" height="50" alt="TOTU logo">
+                <!-- <a class="navbar-brand" href="#!">TUTO tutorials</a> -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <div class="input-group">
+                            <input class="form-control" type="text" placeholder="Enter tutorials" aria-label="Enter here tutorials" aria-describedby="button-search" />
+                            <button onclick="window.location.href='Search/Filter_search_result_page.html'" class="btn btn-primary" id="button-search" type="button">Search</button>
+                        </div>
+                    
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                        
+                        <li class="nav-item"><a onclick="window.location.href='About/index.html'" class="nav-link" href="#!">About us</a></li>
+                        <!-- <button type="Login" class="btn btn-primary mb-2">Login</button> -->
+                        <button onclick="window.location.href='LoginPage/index.html'"class="btn btn-primary" id="button-login" type="button">Login</button>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container">
+<div class="row">
+  <!-- BEGIN SEARCH RESULT -->
+  <div class="col-md-12">
+    <div class="grid search">
+      <div class="grid-body">
+        <div class="row">
+          <!-- BEGIN FILTERS -->
+          <div class="col-md-3">
+            <h2 class="grid-title"><i class="fa fa-filter"></i> Filters</h2>
+            <hr>
+            
+            <!-- BEGIN FILTER BY CATEGORY -->
+            <h4>By category:</h4>
+            <div class="checkbox">
+              <label><input type="checkbox" class="icheck"> Application</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" class="icheck"> Design</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" class="icheck"> Desktop</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" class="icheck"> Management</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" class="icheck"> Mobile</label>
+            </div>
+            <!-- END FILTER BY CATEGORY -->
+
+          </div>
+          <!-- END FILTERS -->
+          <!-- BEGIN RESULT -->
+          <div class="col-md-9">
+            <h2><i class="fa fa-file-o"></i> Result</h2>
+            <hr>
+            <p>Showing all results matching "web development"</p>
+            
+            <div class="padding"></div>
+            
+            <div class="row">
+              <!-- BEGIN ORDER RESULT -->
+              <div class="col-sm-6">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    Order by <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Name</a></li>
+                    <li><a href="#">Date</a></li>
+                    <li><a href="#">View</a></li>
+                    <li><a href="#">Rating</a></li>
+                  </ul>
+                </div>
+              </div>
+              <!-- END ORDER RESULT -->
+              
+              <div class="col-md-6 text-right">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-default active"><i class="fa fa-list"></i></button>
+                  <button type="button" class="btn btn-default"><i class="fa fa-th"></i></button>
+                </div>
+              </div>
+            </div>
+            
+            <!-- BEGIN TABLE RESULT -->
+            <div class="table-responsive">
+              <table class="table table-hover">
+                <tbody><tr>
+                  <td class="number text-center">1</td>
+                  <td class="image"><img src="https://www.bootdey.com/image/400x300/FF8C00" alt=""></td>
+                  <td class="product"><strong>Product 1</strong><br>This is the product description.</td>
+                  <td class="rate text-right"><span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i></span></td>
+                </tr>
+                <tr>
+                  <td class="number text-center">2</td>
+                  <td class="image"><img src="https://www.bootdey.com/image/400x300/5F9EA0" alt=""></td>
+                  <td class="product"><strong>Product 2</strong><br>This is the product description.</td>
+                  <td class="rate text-right"><span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span></td>
+                </tr>
+                <tr>
+                  <td class="number text-center">3</td>
+                  <td class="image"><img src="https://www.bootdey.com/image/400x300" alt=""></td>
+                  <td class="product"><strong>Product 3</strong><br>This is the product description.</td>
+                  <td class="rate text-right"><span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i></span></td>
+                </tr>
+                <tr>
+                  <td class="number text-center">4</td>
+                  <td class="image"><img src="https://www.bootdey.com/image/400x300/8A2BE2" alt=""></td>
+                  <td class="product"><strong>Product 4</strong><br>This is the product description.</td>
+                  <td class="rate text-right"><span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></span></td>
+                </tr>
+                <tr>
+                  <td class="number text-center">5</td>
+                  <td class="image"><img src="https://www.bootdey.com/image/400x300" alt=""></td>
+                  <td class="product"><strong>Product 5</strong><br>This is the product description.</td>
+                  <td class="rate text-right"><span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span></td>
+    
+                <tr>
+                  <td class="number text-center">6</td>
+                  <td class="image"><img src="https://www.bootdey.com/image/400x300/6495ED" alt=""></td>
+                  <td class="product"><strong>Product 6</strong><br>This is the product description.</td>
+                  <td class="rate text-right"><span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i></span></td>
+                  <td class="price text-right">$870</td>
+                </tr>
+                <tr>
+                  <td class="number text-center">7</td>
+                  <td class="image"><img src="https://www.bootdey.com/image/400x300/DC143C" alt=""></td>
+                  <td class="product"><strong>Product 7</strong><br>This is the product description.</td>
+                  <td class="rate text-right"><span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span></td>
+                </tr>
+                <tr>
+                  <td class="number text-center">8</td>
+                  <td class="image"><img src="https://www.bootdey.com/image/400x300/9932CC" alt=""></td>
+                  <td class="product"><strong>Product 8</strong><br>This is the product description.</td>
+                  <td class="rate text-right"><span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i></span></td>
+                </tr>
+              </tbody></table>
+            </div>
+            <!-- END TABLE RESULT -->
+            
+            <!-- BEGIN PAGINATION -->
+            <ul class="pagination">
+              <li class="disabled"><a href="#">«</a></li>
+              <li class="active"><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li><a href="#">»</a></li>
+            </ul>
+            <!-- END PAGINATION -->
+          </div>
+          <!-- END RESULT -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END SEARCH RESULT -->
+</div>
+</div>
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<link rel="icon" type="image/x-icon" href="assets/icon-thumb.png" />
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script> 
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>TUTO</title>
+  <style>
+    body.noscroll {
+      overflow: hidden; /* bloqueia scroll */
+    }
+
+    /* Overlay escuro */
+    #overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5); /* semi-transparente */
+      display: none;
+      z-index: 9998;
+    }
+
+    /* Janela de cookies */
+    #cookie-banner {
+      position: fixed;
+      bottom: 50%;
+      left: 50%;
+      transform: translate(-50%, 50%);
+      background: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 26px 10px rgba(0,0,0,0.3);
+      display: none;
+      z-index: 9999;
+    }
+
+    #cookie-banner button {
+      margin: 5px;
+      padding: 8px 12px;
+      border: none;
+      cursor: pointer;
+    }
+    #accept {   
+        background: #6fbe72; 
+        color: white; }
+    #reject {   
+        background: #dd5950; 
+        color: white; }
+  </style>
+</head>
+<body>
+  <!-- Overlay -->
+  <div id="overlay"></div>
+
+  <!-- Janela de cookies -->
+  <div id="cookie-banner">
+    <p>
+This website uses cookies to improve your experience. Do you accept?</p>
+    <button class="btn btn-primary" id="accept" type="button">accept</button>
+    <button class="btn btn-primary" id="reject" type="button">reject</button>
+  </div>
+
+  <script>
+    // Mostrar a janela e overlay após 2 segundos
+    setTimeout(function() {
+      document.getElementById('overlay').style.display = 'block';
+      document.getElementById('cookie-banner').style.display = 'block';
+      document.body.classList.add('noscroll'); // bloqueia scroll
+    }, 500);
+
+    // Função para fechar
+    function fecharBanner(msg) {
+      //alert(msg);
+      document.getElementById('overlay').style.display = 'none';
+      document.getElementById('cookie-banner').style.display = 'none';
+      document.body.classList.remove('noscroll'); // libera scroll
+    }
+
+    document.getElementById('accept').onclick = function() {
+      fecharBanner("Cookies aceitos!");
+    };
+    document.getElementById('reject').onclick = function() {
+      fecharBanner("Cookies recusados!");
+    };
+  </script>
+
+</body>
+</html>
+
+<html lang="pt">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>TUTO</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/icon-thumb.png" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                
+		<img src="src/Tuto_logo_t-A09485.png" width="50" height="50" alt="TOTU logo">
+                <!-- <a class="navbar-brand" href="#!">TUTO tutorials</a> -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <div class="input-group">
+                            <input class="form-control" type="text" placeholder="Enter tutorials" aria-label="Enter here tutorials" aria-describedby="button-search" />
+                            <button onclick="window.location.href='Search/Filter_search_result_page.html'" class="btn btn-primary" id="button-search" type="button">Search</button>
+                        </div>
+                    
+                        <li class="nav-item"><a onclick="window.location.href='About/index.html'" class="nav-link" href="#!">About us</a></li>
+                        <!-- <button type="Login" class="btn btn-primary mb-2">Login</button> -->
+                        <button onclick="window.location.href='LoginPage/index.html'"class="btn btn-primary" id="button-login" type="button">Login</button>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <!--   
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Tutorial 1</h5>
+                <p class="card-text">Descrição breve do tutorial.</p>
+                <a href="#" class="btn btn-primary">Ver mais</a>
+            </div>
+        </div>
+        -->
+
+        <!-- Page content-->
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-lg-8">
+                    <!-- Post content-->
+                    <article>
+                        <!-- Post header-->
+                        <header class="mb-4">
+                            <!-- Post title-->
+                            <h1 class="fw-bolder mb-1">Welcome to Tuto!</h1>
+                        </header>
+                        <!-- Post content-->
+                        <section class="mb-5">
+                            <p class="fs-5 mb-4">Here you'll find practical, clear, and up-to-date tutorials to learn everything from the basics to advanced levels in various areas technology, design, productivity, and much more. Browse, discover, and learn at your own pace. The next step in your learning, start now!</p>
+                            <p class="fs-5 mb-4">To create your tutorials and try advanced tutorials, you will need your account, try login to have more experiences!</p>
+                            <h2 class="fw-bolder mb-4 mt-5">Learn in a simple and practical way.</h2>
+                            <p class="fs-5 mb-4">Our goal is to make knowledge accessible to everyone. Each tutorial is designed to guide you step-by-step, with clear explanations and examples applicable to everyday life.</p>
+                            <p class="fs-5 mb-4">Here, learning isn't complicated: it's organized, focused, and designed so you can progress at your own pace. Whether you're developing new skills, advancing your career, or exploring your curiosities, this is the right place to grow.</p>
+                        </section>
+                    </article>
+                    <!-- Comments section-->
+                    <section class="mb-5">
+                        <div class="card bg-light">
+                            <div class="card-body">
+                                <!-- Comment form-->
+                                <form class="mb-4"><textarea class="form-control" rows="3" placeholder="Leave your comment here!"></textarea></form>
+                                <!-- Comment with nested comments-->
+                                <div class="d-flex mb-4">
+                                    <!-- Parent comment-->
+                                    <div class="flex-shrink-0"><img class="rounded-circle" src="src/James.jpg" alt="..." /></div>
+                                    <div class="ms-3">
+                                        <div class="fw-bold">James</div>
+                                       The tutorials are super clear and well explained, I was able to learn quickly without getting lost.
+                                       <!-- Child comment 1-->
+                                        <div class="d-flex mt-4">
+                                            <div class="flex-shrink-0"><img class="rounded-circle" src="src/John.jpg" alt="..." /></div>
+                                            <div class="ms-3">
+                                                <div class="fw-bold">John</div>
+                                              I really liked the variety of topics, I always find something new to study.
+                                            </div>
+                                        </div>
+                                        <!-- Child comment 2-->
+                                        <div class="d-flex mt-4">
+                                            <div class="flex-shrink-0"><img class="rounded-circle" src="src/Sophia.jpg" alt="..." /></div>
+                                            <div class="ms-3">
+                                                <div class="fw-bold">Sophia</div>
+                                                The way the examples are presented makes them much easier to understand, even for beginners.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Single comment-->
+                                <div class="d-flex">
+                                    <div class="flex-shrink-0"><img class="rounded-circle" src="src/Oliver.jpg" alt="..." /></div>
+                                    <div class="ms-3">
+                                        <div class="fw-bold">Oliver</div>
+                                        The website is practical and straightforward, I learned in just a few hours what previously seemed complicated.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <!-- Side widgets-->
+                <div class="col-lg-4">
+                    <!-- Categories widget-->
+                    <div class="card mb-4">
+                        <div class="card-header">Popular categories</div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <ul class="list-unstyled mb-0">
+                                        <li><a href="#!">Kitchen</a></li>
+                                        <li><a href="#!">Programmation</a></li>
+                                        <li><a href="#!">Games</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-6">
+                                    <ul class="list-unstyled mb-0">
+                                        <li><a href="#!">Videos</a></li>
+                                        <li><a href="#!">Edit images</a></li>
+                                        <li><a href="#!">Eletronics</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Side widget-->
+                    <div class="card mb-4">
+                        <div class="card-header">Your history</div>
+                        <div class="card-body">Your history will appear here!</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; TUTO tutorials 2025</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
